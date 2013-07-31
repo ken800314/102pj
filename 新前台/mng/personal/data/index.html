@@ -3,13 +3,109 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>證照登錄</title>
+    <link rel="stylesheet" type="text/css" href="../../../css/easyui.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/icon.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/demo.css">
+    <script type="text/javascript" src="../../../js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="../../../js/jquery.easyui.min.js"></script>
+	<script>
+        function submitForm(){
+            $('#ff').form('submit');
+        }
+        function clearForm(){
+            $('#ff').form('clear');
+        }
+         $(function () {
+            $("#txtDate").datebox({
+                formatter: function (date) {
+                    var y = date.getFullYear();
+                    var m = date.getMonth() + 1;
+                    var d = date.getDate();
+                    return y + "/" + (m < 10 ? ("0" + m) : m) + "/" + (d < 10 ? ("0" + d) : d);
+                }
+            });
+        });
+    </script>
 </head>
 <body>
-	<div>
-		<h1>證照登錄</h1> <br>
-		<h3>歡迎使用</h3></br>
-		<h3>在各分頁點擊右鍵即可重新整理</h3></br>
-		<h3>第三行</h3></br>
-	</div>
+    <div class="demo-info">
+        <div class="demo-tip icon-tip"></div>
+        <div>請參考證照登錄流程.</div>
+    </div>
+    <div style="margin:10px 0;"></div>
+    <div class="easyui-panel" title="新增登錄" style="width:400px">
+        <div style="padding:10px 0 10px 60px">
+        <form id="ff" method="post">
+            <table>
+                <tr>
+                    <td>姓名：</td>
+                    <td>
+						<input class="easyui-validatebox" type="text" name="name" data-options="required:true"></input>
+					</td>
+                </tr>
+                <tr>
+                    <td>學號：</td>
+                    <td>
+						<input class="easyui-validatebox" type="text" name="uid" data-options="required:true"></input>
+					</td>
+                </tr>
+                <tr>
+                    <td>學制：</td>
+					<td>
+						<select>
+							<option value="四技日間部">四技日間部</option>
+							<option value="四技夜間部">四技夜間部</option>
+						</select>
+					</td>
+				</tr>
+				  <tr>
+                    <td>英文名：</td>
+                    <td>
+						<input class="easyui-validatebox" type="text" name="subject" data-options="required:true"></input>
+					</td>
+                </tr>
+				 <tr>
+                    <td>國內/外：</td>
+					<td>
+						<select>
+							<option value="國內">國內</option>
+							<option value="國外">國外</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+                    <td>證照名稱：</td>
+                    <td>
+						<input class="easyui-validatebox" type="text" name="subject" data-options="required:true"></input>
+					</td>
+                </tr>
+				<tr>
+                    <td>發照單位：</td>
+                    <td>
+						<input class="easyui-validatebox" type="text" name="subject" data-options="required:true"></input>
+					</td>
+                </tr>
+				<tr>
+                    <td>登錄日期：</td>
+					<td>
+						<input class="easyui-datebox"  id="txtDate" data-options="formatter:myformatter,parser:myparser"></input>
+					</td>
+                </tr>
+				<tr>
+                    <td>級別：</td>
+                    <td>
+						<input class="easyui-validatebox" type="text" name="subject" data-options="required:true"></input>
+					</td>
+                </tr>
+				<tr>
+				</tr>
+            </table>
+        </form>
+        </div>
+        <div style="text-align:center;padding:5px">
+            <a href="javascript:void(0)" class="easyui-linkbutton" onclick="submitForm()">確認</a>
+            <a href="javascript:void(0)" class="easyui-linkbutton" onclick="clearForm()">清除</a>
+        </div>
+    </div>
 </body>
 </html>
