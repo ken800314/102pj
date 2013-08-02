@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="../../../css/demo.css">
     <script type="text/javascript" src="../../../js/jquery-1.7.2.min.js"></script>
     <script type="text/javascript" src="../../../js/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="../../../js/easyui-lang-zh_TW.js"></script>
 	<script>
         function submitForm(){
             $('#ff').form('submit');
@@ -51,7 +52,7 @@
                 <tr>
                     <td>學制：</td>
 					<td>
-						<select>
+						<select class="easyui-combobox" name="state">
 							<option value="四技日間部">四技日間部</option>
 							<option value="四技夜間部">四技夜間部</option>
 						</select>
@@ -66,7 +67,7 @@
 				 <tr>
                     <td>國內/外：</td>
 					<td>
-						<select>
+						<select class="easyui-combobox" name="state">
 							<option value="國內">國內</option>
 							<option value="國外">國外</option>
 						</select>
@@ -87,7 +88,7 @@
 				<tr>
                     <td>登錄日期：</td>
 					<td>
-						<input class="easyui-datebox"  id="txtDate" data-options="formatter:myformatter,parser:myparser"></input>
+						<input class="easyui-datebox" id="txtDate"></input>
 					</td>
                 </tr>
 				<tr>
