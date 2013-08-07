@@ -9,6 +9,8 @@
     <script type="text/javascript" src="../../../js/jquery-1.7.2.min.js"></script>
     <script type="text/javascript" src="../../../js/jquery.easyui.min.js"></script>
     <script type="text/javascript" src="../../../js/easyui-lang-zh_TW.js"></script>
+    <script type="text/javascript" src="js/selectboxes.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
 	<script>
         function submitForm(){
             $('#ff').form('submit');
@@ -73,18 +75,47 @@
 						</select>
 					</td>
 				</tr>
+				 <tr>
+                    <td>證照類別：</td>
+					<td>
+						<select id="select1">
+							<option value="">請選擇</option>
+							<?php
+									// 資料庫設定
+								$host_sql = 'localhost';
+								$username_sql = 'root';
+								$password_sql = '0000';
+									// 聯結資料庫
+								$link = mysql_connect($host_sql, $username_sql, $password_sql) or die('無法連結資料庫');
+									mysql_select_db('selectboxes', $link);
+									mysql_query('SET NAMES UTF8');
+									// 動態取得第一階層下拉式選單
+								$query = 'SELECT id, name FROM games WHERE levelNum = 1';
+								$result = mysql_query($query, $link);
+								while ($row = mysql_fetch_assoc($result)) {
+								echo '<option value="' . $row['id'] . '">' . $row['name'] . '</option>' . "\n";
+								}
+							?>
+						</select>
+					</td>
+				</tr>
 				<tr>
                     <td>證照名稱：</td>
-                    <td>
-						<input class="easyui-validatebox" type="text" name="subject" data-options="required:true"></input>
+					<td>
+						<select id="select2">
+							<option value="">請選擇</option>
+						</select>
 					</td>
-                </tr>
+				</tr>
 				<tr>
-                    <td>發照單位：</td>
-                    <td>
-						<input class="easyui-validatebox" type="text" name="subject" data-options="required:true"></input>
+                    <td>點數：</td>
+					<td>
+						<select id="select3">
+							<option value="">請選擇</option>
+						</select>
 					</td>
-                </tr>
+				</tr>
+				<input id="fullIdPath" type="hidden" value="0,0,0" />
 				<tr>
                     <td>登錄日期：</td>
 					<td>
