@@ -18,7 +18,7 @@
         $parentId = (int) $_GET['id'];
         $levelNum = (int) $_GET['lv'];
         
-        $query = sprintf("SELECT id, name FROM games WHERE parentId = %d AND levelNum = %d", $parentId, $levelNum);
+        $query = sprintf("SELECT id, name FROM games WHERE parentId = $parentId AND levelNum = $parentId");
         $result = mysql_query($query, $link);
         while ($row = mysql_fetch_assoc($result)) {
         

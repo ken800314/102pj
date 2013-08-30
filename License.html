@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+</head>
+<body>
+<div width="100%">
+	<div>
+	<ul type="Square">
+		<li><h3>公告區</h3></li>
+			<ol type="1">
+				<li>最新消息</li>
+					<ul type="Circle">
+						<li>資料表︰</li>
+						<li>欄位︰日期、主旨、內容、刪除、上/下線</li>
+						<li>篩選條件︰無</li>
+						<li>狀態說明︰</li>
+							<ol type="I">
+								<li>刪除 = 0 存在</li>
+								<li>刪除 = 1 刪除</li>
+								<li>上/下線 = 0 上線</li>
+								<li>上/下線 = 1 下線</li>
+							</ol>
+						<li>SQL重點︰
+							<ol type="I">
+								<li>刪除 = 0</li>
+								<li>上/下線 = 0</li>
+								<li>ORDER BY "日期" DESC</li>
+							</ol>
+						</li>
+					</ul>
+				<li>系上公告</li>
+					<ul type="Circle">
+						<li>資料表︰</li>
+						<li>欄位︰日期、主旨、內容、刪除、上/下線</li>
+						<li>篩選條件︰無</li>
+						<li>狀態說明︰</li>							
+							<ol type="I">
+								<li>刪除 = 0 存在</li>
+								<li>刪除 = 1 刪除</li>
+								<li>上/下線 = 0 上線</li>
+								<li>上/下線 = 1 下線</li>
+							</ol>
+						<li>SQL重點︰
+							<ol type="I">
+								<li>刪除 = 0</li>
+								<li>上/下線 = 0</li>
+								<li>ORDER BY "日期" DESC</li>
+							</ol>
+						</li>
+					</ul>
+				<li>登錄流程</li>
+			</ol>
+		<li><h3>個人區</h3></li>
+			<ol type="1">
+				<li>密碼修改</li>
+					<ul type="Circle">
+						<li>資料表︰</li>
+						<li>欄位︰密碼</li>
+						<li>篩選條件︰無</li>
+						<li>狀態說明︰無</li>
+						<li>SQL重點︰UPDATE "密碼"</li>
+					</ul>
+				<li>證照登錄</li>
+				<li>證照累計點數查詢</li>
+				<li>證照審核查詢</li>
+			</ol>
+		<li><h3>證照查詢區</h3></li>
+			<ol type="1">
+				<li>近期證照考試</li>
+				<li>各證照點數查詢</li>
+			</ol>
+		<li><h3>證照排行榜區</h3></li>
+			<ol type="1">
+				<li>各學年班級排行榜</li>
+				<li>各學年排行榜</li>
+				<li>歷年最高紀錄排行</li>
+			</ol>
+	</ul>
+	</div>
+</div>
+</body>
+</html>

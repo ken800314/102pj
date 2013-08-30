@@ -1,0 +1,278 @@
+<!DOCTYPE html PUBLIC "-//W3C//Dth XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/Dth/xhtml1-transitional.dth">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>資料庫</title>
+</head>
+<body>
+	<div width="100%">
+		<table align='center'>
+			<th colspan='5' align='center'><h2>資料庫架構</h2></th>
+			<tr>	
+			<th colspan='5' align='center'><h4>以下為資料庫所有資料表以及內容，藍色為資料表之後為欄位</h4></th>
+			<tr>
+			<!-- 公告開始 -->
+				<th colspan='5' align='center' bgcolor='#1e90ff'>`bulletin`(公告&消息)</th>
+				<tr bgcolor='#ff8c00' align='center'>
+					<th width="130px">欄位名稱</th>
+					<th width="130px">欄位型態/長度</th>
+					<th width="120px">描述</th>
+					<th width="80px">允許NULL</th>
+					<th width="220px">備註</th>
+					<tr bgcolor='#f5deb3' align='center'>
+						<th>`date`</th>
+						<th>date</th>
+						<th>(日期)</th>
+						<th>否</th>
+						<th></th>
+					<tr bgcolor='#f0e68c' align='center'>
+						<th>`title`</th>
+						<th>varchar(50)</th>
+						<th>(主旨)</th>
+						<th>否</th>
+						<th></th>
+					<tr bgcolor='#f5deb3' align='center'>
+						<th>`content`</th>
+						<th>varchar(255)</th>
+						<th>(內容)</th>
+						<th>否</th>
+						<th></th>
+					<tr bgcolor='#f0e68c' align='center'>
+						<th>`online`</th>
+						<th>int(20)</th>
+						<th>(上/下線)</th>
+						<th>否</th>
+						<th>(0=上線 1=下線)</th>
+					<tr bgcolor='#f5deb3' align='center'>
+						<th>`delete`</th>
+						<th>int(20)</th>
+						<th>(刪除)</th>
+						<th>否</th>
+						<th>(0=不刪 1=刪除)</th>
+					<tr bgcolor='#f0e68c' align='center'>
+						<th>bulletin_news</th>
+						<th>int(20)</th>
+						<th>公告/消息</th>
+						<th>否</th>
+						<th>(0=公告 1=消息)</th>
+			<!-- 公告結束 -->
+					<tr>
+					<th colspan='5' height="25px"></th>
+					<tr>
+			<!-- 證照資料開始 -->
+				<th colspan='5' align='center' bgcolor='#1e90ff'>`data`(證照資料)</th>
+					<tr bgcolor='#ff8c00' align='center'>
+					<th width="130px">欄位名稱</th>
+					<th width="130px">欄位型態/長度</th>
+					<th width="120px">描述</th>
+					<th width="80px">允許NULL</th>
+					<th width="220px">備註</th>
+					<tr bgcolor='#f5deb3' align='center'>
+						<th>`sn`</th>
+						<th>varchar(20)</th>
+						<th>(流水號)</th>
+						<th>否</th>
+						<th></th>
+					<tr bgcolor='#f0e68c' align='center'>
+						<th>`school_system`</th>
+						<th>int(20)</th>
+						<th>(學制)</th>
+						<th>否</th>
+						<th>(0=四技日間部 1=四技夜間部)</th>
+					<tr bgcolor='#f5deb3' align='center'>
+						<th>`class`</th>
+						<th>int(20)</th>
+						<th>(班級)</th>
+						<th>否</th>
+						<th>(0=忠 1=信 2=篤)</th>
+					<tr bgcolor='#f0e68c' align='center'>
+						<th>`sid`</th>
+						<th>int(20)</th>
+						<th>(學號)</th>
+						<th>否</th>
+						<th></th>
+					<tr bgcolor='#f5deb3' align='center'>
+						<th>`cname`</th>
+						<th>varchar(20)</th>
+						<th>(中文姓名)</th>
+						<th>否</th>
+						<th></th>
+					<tr bgcolor='#f0e68c' align='center'>
+						<th>`ename`</th>
+						<th>varchar(20)</th>
+						<th>(英文姓名)</th>
+						<th>否</th>
+						<th></th>
+					<tr bgcolor='#f5deb3' align='center'>
+						<th>`year`</th>
+						<th>varchar(20)</th>
+						<th>(學期)</th>
+						<th>否</th>
+						<th></th>
+					<tr bgcolor='#f0e68c' align='center'>
+						<th>`semester`</th>
+						<th>int(20)</th>
+						<th>(入學學年)</th>
+						<th>否</th>
+						<th></th>
+					<tr bgcolor='#f5deb3' align='center'>
+						<th>`licensing_date`</th>
+						<th>date</th>
+						<th>(發照日)</th>
+						<th>否</th>
+						<th></th>
+					<tr bgcolor='#f0e68c' align='center'>
+						<th>`domestic_outer`</th>
+						<th>varchar(20)</th>
+						<th>(國內外)</th>
+						<th>否</th>
+						<th></th>
+					<tr bgcolor='#f5deb3' align='center'>
+						<th>`licensing_units`</th>
+						<th>varchar(100)</th>
+						<th>(發照單位)</th>
+						<th>否</th>
+						<th></th>
+					<tr bgcolor='#f0e68c' align='center'>
+						<th>`license_name`</th>
+						<th>varchar(100)</th>
+						<th>(證照名稱)</th>
+						<th>否</th>
+						<th></th>
+					<tr bgcolor='#f5deb3' align='center'>
+						<th>`count`</th>
+						<th>int(20)</th>
+						<th>(點數)</th>
+						<th>否</th>
+						<th></th>
+					<tr bgcolor='#f0e68c' align='center'>
+						<th>`image_upload`</th>
+						<th>blob</th>
+						<th>(證照影像檔)</th>
+						<th>否</th>
+						<th>//待測試</th>
+					<tr bgcolor='#f5deb3' align='center'>
+						<th>`delete`</th>
+						<th>int(20)</th>
+						<th>(刪除)</th>
+						<th>否</th>
+						<th>(0=不刪 1=刪除)</th>
+					<tr bgcolor='#f0e68c' align='center'>
+						<th>`audit_state`</th>
+						<th>int(20)</th>
+						<th>(審核狀態)</th>
+						<th>否</th>
+						<th>(0=通過 1=未過 2=待審)</th>
+					<tr bgcolor='#f5deb3' align='center'>
+						<th>`audit frequency`</th>
+						<th>int(20)</th>
+						<th>(審核次數)</th>
+						<th>否</th>
+						<th>(0=1次 1=2次 2=3次)</th>
+					<tr bgcolor='#f0e68c' align='center'>
+						<th>`audit_fail_reason`</th>
+						<th>varchar(500)</th>
+						<th>(審核未過原因)</th>
+						<th><font color='red'>是</font></th>
+						<th></th>
+			<!-- 證照資料結束 -->
+					<tr>
+					<th colspan='5' height="25px"></th>
+					<tr>
+			<!-- 管理者帳戶開始 -->
+				<th colspan='5' align='center' bgcolor='#1e90ff'>`root`(管理者帳戶)</th>
+					<tr bgcolor='#ff8c00' align='center'>
+					<th width="130px">欄位名稱</th>
+					<th width="130px">欄位型態/長度</th>
+					<th width="120px">描述</th>
+					<th width="80px">允許NULL</th>
+					<th width="220px">備註</th>
+					<tr bgcolor='#f5deb3' align='center'>
+						<th>`root`</th>
+						<th>varchar(20)</th>
+						<th>(帳號)</th>
+						<th>否</th>
+						<th></th>
+					<tr bgcolor='#f0e68c' align='center'>
+						<th>`password`</th>
+						<th>varchar(20)</th>
+						<th>(密碼)</th>
+						<th>否</th>
+						<th></th>
+					<tr bgcolor='#f5deb3' align='center'>
+						<th>`name`</th>
+						<th>varchar(20)</th>
+						<th>(中文姓名)</th>
+						<th>否</th>
+						<th></th>
+					<tr bgcolor='#f0e68c' align='center'>
+						<th>`ename`</th>
+						<th>varchar(20)</th>
+						<th>(英文姓名)</th>
+						<th><font color='red'>是</font></th>
+						<th></th>
+					<tr bgcolor='#f5deb3' align='center'>
+						<th>`delete`</th>
+						<th>int(20)</th>
+						<th>(判斷)</th>
+						<th>否</th>
+						<th></th>
+			<!-- 管理者帳戶結束 -->
+					<tr>
+					<th colspan='5' height="25px"></th>
+					<tr>
+			<!-- 學生帳戶開始 -->
+				<th colspan='5' align='center' bgcolor='#1e90ff'>`suid`(學生帳戶)</th>
+					<tr bgcolor='#ff8c00' align='center'>
+					<th width="130px">欄位名稱</th>
+					<th width="130px">欄位型態/長度</th>
+					<th width="120px">描述</th>
+					<th width="80px">允許NULL</th>
+					<th width="220px">備註</th>
+					<tr bgcolor='#f5deb3' align='center'>
+						<th>`user_id`</th>
+						<th>varchar(20)</th>
+						<th>(帳號)</th>
+						<th>否</th>
+						<th></th>
+					<tr bgcolor='#f0e68c' align='center'>
+						<th>`password`</th>
+						<th>varchar(20)</th>
+						<th>(密碼)</th>
+						<th>否</th>
+						<th></th>
+					<tr bgcolor='#f5deb3' align='center'>
+						<th>`school_system`</th>
+						<th>varchar(20)</th>
+						<th>(學制)</th>
+						<th>否</th>
+						<th></th>
+					<tr bgcolor='#f0e68c' align='center'>
+						<th>`sid`</th>
+						<th>int(20)</th>
+						<th>(學號)</th>
+						<th>否</th>
+						<th></th>	
+					<tr bgcolor='#f5deb3' align='center'>
+						<th>`name`</th>
+						<th>varchar(20)</th>
+						<th>(中文姓名)</th>
+						<th>否</th>
+						<th></th>
+					<tr bgcolor='#f0e68c' align='center'>
+						<th>`ename`</th>
+						<th>varchar(20)</th>
+						<th>(英文姓名)</th>
+						<th>否</th>
+						<th></th>	
+					<tr bgcolor='#f5deb3' align='center'>
+						<th>`delete`</th>
+						<th>int(20)</th>
+						<th>(判斷)</th>
+						<th>否</th>
+						<th></th>						
+			<!-- 學生帳戶結束 -->
+		</table>
+	</div>
+</body>
+</html>

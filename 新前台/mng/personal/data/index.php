@@ -99,6 +99,9 @@
 						</select>
 					</td>
 				</tr>
+							<!-- 利用隱藏欄位指定預設的選項 -->
+
+							<input id="fullIdPath" type="hidden" value="0,0,0" />
 				<tr>
                     <td>證照名稱：</td>
 					<td>

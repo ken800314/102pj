@@ -3,13 +3,25 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>系上公告</title>
+    <link rel="stylesheet" type="text/css" href="../../../css/easyui.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/icon.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/demo.css">
+    <script type="text/javascript" src="../../../js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="../../../js/jquery.easyui.min.js"></script>
 </head>
 <body>
-	<div>
-		<h1>系上公告</h1> <br>
-		<h3>歡迎使用</h3></br>
-		<h3>在各分頁點擊右鍵即可重新整理</h3></br>
-		<h3>第三行</h3></br>
-	</div>
+    <h2>系上公告</h2>
+    <div class="demo-info">
+        <div><img src="../../../css/images/tip.png">備註.</div>
+    </div>
+	<table class="easyui-datagrid" style="width:500px;height:auto">
+        <thead>
+            <tr>
+                <th data-options="field:'itemid',width:100px">狀態</th>
+                <th data-options="field:'productid',width:200px">內容</th>
+                <th data-options="field:'listprice',width:100px">日期</th>
+            </tr>
+        </thead>
+    </table>
 </body>
 </html>
