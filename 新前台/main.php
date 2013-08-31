@@ -10,12 +10,39 @@
 <script type="text/javascript" src="js/backend.js"></script>
 </head>
 <body class="easyui-layout">
+<?php
+	require_once("dbtools.inc.php");
+      session_start();
+	  if (isset($_SESSION["user_id"]))
+	  {
+        $user_id = $_SESSION["user_id"];
+	  }
+	else
+	{
+	    header("location:index.html");
+	}
+      $link = create_connection();		//建立資料庫連結	  
+      $sql = "SELECT * FROM suid WHERE user_id = '$user_id'";
+      $result = execute_sql("License", $sql, $link);
+	  $row = mysql_fetch_assoc($result);
+?>
 	<div region="north" border="true" class="cs-north">
 		<div class="cs-north-bg">
 			<div class="cs-north-logo">
 				<img src="css/images/tip.png">
-				姓名：
-				學制：
+				學號：<font color='black'><?php echo $row['sid'] ?></font>
+				姓名：<font color='black'><?php echo $row['name'] ?></font>
+				學制：<font color='black'>
+						<?php  									//判斷試  0 = 四技日間部  1 = 四技夜間部
+							if($row['school_system'] == 0)
+								{
+									echo "四技日間部";
+								}
+							else
+								{
+									echo "四技夜間部";
+								}
+						?></font>
 			<a href="logout.php">登出網站</a>
 			</div>
 			<div class="cs-north-logo_1">
