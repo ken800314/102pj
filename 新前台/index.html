@@ -6,7 +6,7 @@
     <script type="text/javascript">
       function check_data()
       {
-        if (document.myForm.student_id.value.length == 0)
+        if (document.myForm.user_id.value.length == 0)
           alert("帳號不可以空白");
         else if (document.myForm.password.value.length == 0)
           alert("密碼不可以空白");
@@ -19,19 +19,19 @@
 <div id="sidebar1">
 		臺北城市科技大學</br>
 		<div class="login">
-	<form action="checkpwd.php" method="post" name="myForm">
-		<p>帳號：
-			<input name="student_id" type="text" size="15">
-    	</p>
-		<p>密碼： 
-			<input name="password" type="password" size="15">
-    	</p>
-		<p>
-			<input type="button" value="登入" onClick="check_data()"> 
-			<input type="reset" value="重填">
-		</p>
-    </form>
-</div>
+			<form action="checkpwd.php" method="post" name="myForm">
+				<p>帳號：
+					<input name="user_id" type="text" size="15">
+				</p>
+				<p>密碼： 
+					<input name="password" type="password" size="15">
+				</p>
+				<p>
+					<input type="button" value="登入" onClick="check_data()"> 
+					<input type="reset" value="重填">
+				</p>
+			</form>
+		</div>
 </div>
 </body>
 </html>
