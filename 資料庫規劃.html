@@ -116,21 +116,21 @@
 						<th>否</th>
 						<th></th>
 					<tr bgcolor='#f5deb3' align='center'>
-						<th>`licensing_date`</th>
+						<th>`date`</th>
 						<th>date</th>
-						<th>(發照日)</th>
+						<th>(登錄日期)</th>
 						<th>否</th>
 						<th></th>
 					<tr bgcolor='#f0e68c' align='center'>
 						<th>`domestic_outer`</th>
 						<th>varchar(20)</th>
-						<th>(國內外)</th>
+						<th>(國內/外)</th>
 						<th>否</th>
-						<th></th>
+						<th>(0=國內 1=國外)</th>
 					<tr bgcolor='#f5deb3' align='center'>
 						<th>`licensing_units`</th>
 						<th>varchar(100)</th>
-						<th>(發照單位)</th>
+						<th>(證照類別)</th>
 						<th>否</th>
 						<th></th>
 					<tr bgcolor='#f0e68c' align='center'>
@@ -164,7 +164,7 @@
 						<th>否</th>
 						<th>(0=通過 1=未過 2=待審)</th>
 					<tr bgcolor='#f5deb3' align='center'>
-						<th>`audit frequency`</th>
+						<th>`audit_frequency`</th>
 						<th>int(20)</th>
 						<th>(審核次數)</th>
 						<th>否</th>
@@ -231,7 +231,7 @@
 					<th width="220px">備註</th>
 					<tr bgcolor='#f5deb3' align='center'>
 						<th>`user_id`</th>
-						<th>int(20)</th>
+						<th>varchar(20)</th>
 						<th>(帳號)</th>
 						<th>否</th>
 						<th></th>

@@ -5,13 +5,11 @@ $(function () {
     if (0 < $.trim($('#fullIdPath').val()).length) {
         $fullIdPath = $('#fullIdPath').val().split(',');
         defaultValue = true;
-    }
-    
+    }   
     // 設定預設選項
     if (defaultValue) {
         $('#select1').selectOptions($fullIdPath[0]); 
-    }
-    
+    }   
     // 開始產生關聯下拉式選單
     $('#select1').change(function () {
         // 觸發第二階下拉式選單
@@ -47,8 +45,8 @@ $(function () {
 
     // 全部選擇完畢後，顯示所選擇的選項
     $('#select3').change(function () {
-        alert('類別：' + $('#select1 option:selected').text() + 
-              '／證照：' + $('#select2 option:selected').text() +
+        alert('證照類別：' + $('#select1 option:selected').text() + 
+              '／證照名稱：' + $('#select2 option:selected').text() +
               '／點數：' + $('#select3 option:selected').text());
     });
 });

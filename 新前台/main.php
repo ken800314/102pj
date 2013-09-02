@@ -31,9 +31,9 @@
 			<div class="cs-north-logo">
 				<img src="css/images/tip.png">
 				學號：<font color='black'><?php echo $row['sid'] ?></font>
-				姓名：<font color='black'><?php echo $row['name'] ?></font>
-				學制：<font color='black'>
-						<?php  									//判斷試  0 = 四技日間部  1 = 四技夜間部
+				|姓名：<font color='black'><?php echo $row['name'] ?></font>
+				|學制：<font color='black'>
+						<?php  									//判斷  0 = 四技日間部  1 = 四技夜間部
 							if($row['school_system'] == 0)
 								{
 									echo "四技日間部";
@@ -43,7 +43,7 @@
 									echo "四技夜間部";
 								}
 						?></font>
-			<a href="logout.php">登出網站</a>
+			<a href="logout.php"><font color='red'>[登出系統]</font></a>
 			</div>
 			<div class="cs-north-logo_1">
 			證照管理系統

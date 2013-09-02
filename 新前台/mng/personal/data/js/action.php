@@ -18,7 +18,7 @@
         $parentId = (int) $_GET['id'];
         $levelNum = (int) $_GET['lv'];
         
-        $query = sprintf("SELECT id, name FROM games WHERE parentId = $parentId AND levelNum = $parentId");
+        $query = sprintf("SELECT id, name FROM games WHERE parentId = %d AND levelNum = %d", $parentId, $levelNum);
         $result = mysql_query($query, $link);
         while ($row = mysql_fetch_assoc($result)) {
         
@@ -29,4 +29,3 @@
     
     // 將陣列轉換為 json 格式輸入
     echo json_encode($data);
-?>
